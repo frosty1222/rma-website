@@ -1,0 +1,13 @@
+0000.000 (1) Opened log file at time: Wed, 25 Sep 2024 04:47:05 +0000 on http://localhost/rma
+0000.002 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.6.2 PHP: 8.1.6 (apache2handler, Windows NT CHARLIE-NGUYEN 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=33554432) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.6 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 76.2M | 78M) multisite: N openssl: OpenSSL 1.1.1n  15 Mar 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.003 (1) Free space on disk containing Updraft's temporary directory: 87780.9 MB
+0000.005 (1) Requesting backup semaphore lock (017afad7be26)
+0000.008 (1) [Debug] Lock option (updraft_lock_017afad7be26, wp_tpnpoce08m_options) was created in the database
+0000.009 (1) [Info] Lock (updraft_lock_017afad7be26, wp_tpnpoce08m_options) acquired after initialising the database
+0000.017 (1) This backup task (017afad7be26) is either complete or began over 2 days ago: ending (1727239625.4028, ) (existing jobdata keys: )
+0000.000 (1) Opened log file at time: Wed, 25 Sep 2024 04:49:05 +0000 on http://localhost/rma
+0000.002 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.6.2 PHP: 8.1.6 (apache2handler, Windows NT CHARLIE-NGUYEN 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=33554432) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.6 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 75.9M | 78M) multisite: N openssl: OpenSSL 1.1.1n  15 Mar 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.003 (1) Free space on disk containing Updraft's temporary directory: 87780.6 MB
+0000.005 (1) Requesting backup semaphore lock (017afad7be26)
+0000.007 (1) [Info] Lock (updraft_lock_017afad7be26, wp_tpnpoce08m_options) acquired
+0000.019 (1) This backup task (017afad7be26) is either complete or began over 2 days ago: ending (1727239745.6259, ) (existing jobdata keys: )
