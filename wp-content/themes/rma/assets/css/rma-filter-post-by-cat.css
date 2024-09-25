@@ -1,0 +1,8 @@
+@media(min-width: 768px) {
+    .filter-post-by-cat .category-filter {
+        display: flex !important;
+        height: auto !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

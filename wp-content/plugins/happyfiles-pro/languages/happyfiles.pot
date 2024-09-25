@@ -1,0 +1,619 @@
+# Copyright (C) 2023 HappyFiles Internationalisation
+# This file is distributed under the same license as the HappyFiles Internationalisation package.
+msgid ""
+msgstr ""
+"Project-Id-Version: HappyFiles Internationalisation\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-03-05 05:30+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../build/happyfiles-pro/includes/actions.php:71, ../includes/actions.php:71
+msgid "No folder name or term ID provided."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/ajax.php:253, ../build/happyfiles-pro/includes/setup.php:153, ../includes/ajax.php:253, ../includes/setup.php:153
+msgid "Duplicate"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/data.php:236, ../build/happyfiles-pro/includes/admin/settings.php:27, ../includes/data.php:236, ../includes/admin/settings.php:27
+msgid "All Files"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/data.php:236, ../includes/data.php:236
+msgid "All %s"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/data.php:237, ../includes/data.php:237
+msgid "Files"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/data.php:229, ../includes/data.php:229
+msgid "All Plugins"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/data.php:266, ../build/happyfiles-pro/includes/pro.php:122, ../build/happyfiles-pro/includes/setup.php:242, ../build/happyfiles-pro/includes/admin/settings.php:28, ../includes/data.php:266, ../includes/pro.php:122, ../includes/setup.php:242, ../includes/admin/settings.php:28
+msgid "Uncategorized"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/import.php:158, ../includes/import.php:158
+msgid "Folders from another media plugin detected to import"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/import.php:159, ../includes/import.php:159
+msgid "Import/delete folder data"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/import.php:410, ../includes/import.php:410
+msgid "Nothing to import"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/import.php:474, ../includes/import.php:474
+msgid "%s folders successfully imported."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/import.php:583, ../build/happyfiles-pro/includes/import.php:703, ../includes/import.php:583, ../includes/import.php:703
+msgid "%s folders imported and %s items categorized."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/import.php:586, ../build/happyfiles-pro/includes/import.php:706, ../includes/import.php:586, ../includes/import.php:706
+msgid "View media library"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro.php:74, ../build/happyfiles-pro/includes/pro.php:75, ../build/happyfiles-pro/includes/setup.php:35, ../build/happyfiles-pro/includes/setup.php:36, ../build/happyfiles-pro/includes/setup.php:139, ../includes/pro.php:74, ../includes/pro.php:75, ../includes/setup.php:35, ../includes/setup.php:36, ../includes/setup.php:139
+msgid "Folder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro.php:76, ../build/happyfiles-pro/includes/pro.php:78, ../build/happyfiles-pro/includes/setup.php:37, ../build/happyfiles-pro/includes/setup.php:39, ../includes/pro.php:76, ../includes/pro.php:78, ../includes/setup.php:37, ../includes/setup.php:39
+msgid "Add new folder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro.php:77, ../build/happyfiles-pro/includes/setup.php:38, ../includes/pro.php:77, ../includes/setup.php:38
+msgid "Edit folder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro.php:79, ../build/happyfiles-pro/includes/setup.php:40, ../includes/pro.php:79, ../includes/setup.php:40
+msgid "Search folder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro.php:80, ../build/happyfiles-pro/includes/setup.php:41, ../includes/pro.php:80, ../includes/setup.php:41
+msgid "Folder not found"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro.php:81, ../build/happyfiles-pro/includes/setup.php:42, ../includes/pro.php:81, ../includes/setup.php:42
+msgid "Folder not found in trash"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro.php:121, ../includes/pro.php:121
+msgid "All %1$s folders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/settings.php:25, ../build/happyfiles-pro/includes/settings.php:186, ../build/happyfiles-pro/includes/admin/settings.php:3, ../includes/settings.php:25, ../includes/settings.php:186, ../includes/admin/settings.php:3
+msgid "Settings"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/settings.php:40, ../includes/settings.php:40
+msgid "Are you sure you want to delete all your HappyFiles folders, associations, and settings?"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/settings.php:166, ../includes/settings.php:166
+msgid "No HappyFiles data to delete."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/settings.php:162, ../includes/settings.php:162
+msgid "HappyFiles data has been deleted."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:135, ../includes/setup.php:135
+msgid "Click the \"+\" button above to create your first folder. Then start dragging items into it. To remove an item from a folder drag it into the \"Uncategorized\" folder."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:136, ../includes/setup.php:136
+msgid "No folders found that match your search criteria. Please try another phrase or clear your search. Search is case-sensitive."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:137, ../build/happyfiles-pro/includes/shortcode.php:94, ../includes/setup.php:137, ../includes/shortcode.php:94
+msgid "Attachment IDs"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:138, ../includes/setup.php:138
+msgid "Items"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:140, ../build/happyfiles-pro/includes/shortcode.php:100, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:40, ../includes/setup.php:140, ../includes/shortcode.php:100, ../includes/integrations/bricks-gallery.php:40
+msgid "Folders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:141, ../includes/setup.php:141
+msgid "Select"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:142, ../includes/setup.php:142
+msgid "Create"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:143, ../includes/setup.php:143
+msgid "Cancel"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:144, ../includes/setup.php:144
+msgid "Rename"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:145, ../includes/setup.php:145
+msgid "Delete"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:146, ../includes/setup.php:146
+msgid "Move"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:147, ../includes/setup.php:147
+msgid "Search"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:148, ../includes/setup.php:148
+msgid "Uploaded"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:149, ../includes/setup.php:149
+msgid "Sort"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:150, ../includes/setup.php:150
+msgid "Expand"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:151, ../includes/setup.php:151
+msgid "Collapse"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:152, ../includes/setup.php:152
+msgid "Details"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:154, ../build/happyfiles-pro/includes/shortcode.php:95, ../includes/setup.php:154, ../includes/shortcode.php:95
+msgid "Clear"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:155, ../includes/setup.php:155
+msgid "Subfolders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:156, ../build/happyfiles-pro/includes/shortcode.php:101, ../includes/setup.php:156, ../includes/shortcode.php:101
+msgid "Hold down CTRL/CMD to select multiple folders."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:158, ../includes/setup.php:158
+msgid "Delete folders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:159, ../includes/setup.php:159
+msgid "Delete folders & subfolders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:160, ../includes/setup.php:160
+msgid "Please confirm how you'd like to delete the HappyFiles folders listed below. All items inside those folders are safe & won't be deleted!"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:161, ../includes/setup.php:161
+msgid "The selected folders have been deleted."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:162, ../includes/setup.php:162
+msgid "The selected folder no longer exists. We recommend selecting another folder."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:164, ../includes/setup.php:164
+msgid "Download"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:167, ../includes/setup.php:167
+msgid "Edit"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:168, ../includes/setup.php:168
+msgid "Save"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:169, ../includes/setup.php:169
+msgid "Color"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:172, ../includes/setup.php:172
+msgid "Click to copy"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:173, ../includes/setup.php:173
+msgid "Gallery shortcode"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:174, ../includes/setup.php:174
+msgid "Default"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:175, ../build/happyfiles-pro/includes/shortcode.php:96, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:49, ../includes/setup.php:175, ../includes/shortcode.php:96, ../includes/integrations/bricks-gallery.php:49
+msgid "Columns"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:176, ../build/happyfiles-pro/includes/shortcode.php:97, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:65, ../includes/setup.php:176, ../includes/shortcode.php:97, ../includes/integrations/bricks-gallery.php:65
+msgid "Max items"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:177, ../build/happyfiles-pro/includes/shortcode.php:98, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:73, ../includes/setup.php:177, ../includes/shortcode.php:98, ../includes/integrations/bricks-gallery.php:73
+msgid "Height"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:178, ../build/happyfiles-pro/includes/shortcode.php:99, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:87, ../includes/setup.php:178, ../includes/shortcode.php:99, ../includes/integrations/bricks-gallery.php:87
+msgid "Spacing"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:179, ../build/happyfiles-pro/includes/shortcode.php:104, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:101, ../includes/setup.php:179, ../includes/shortcode.php:104, ../includes/integrations/bricks-gallery.php:101
+msgid "Order by"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:180, ../build/happyfiles-pro/includes/shortcode.php:105, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:122, ../includes/setup.php:180, ../includes/shortcode.php:105, ../includes/integrations/bricks-gallery.php:122
+msgid "Order"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:181, ../build/happyfiles-pro/includes/shortcode.php:102, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:134, ../includes/setup.php:181, ../includes/shortcode.php:102, ../includes/integrations/bricks-gallery.php:134
+msgid "Image size"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:182, ../build/happyfiles-pro/includes/shortcode.php:103, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:148, ../includes/setup.php:182, ../includes/shortcode.php:103, ../includes/integrations/bricks-gallery.php:148
+msgid "Link to"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:183, ../build/happyfiles-pro/includes/shortcode.php:106, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:161, ../includes/setup.php:183, ../includes/shortcode.php:106, ../includes/integrations/bricks-gallery.php:161
+msgid "No crop"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:184, ../build/happyfiles-pro/includes/shortcode.php:107, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:167, ../includes/setup.php:184, ../includes/shortcode.php:107, ../includes/integrations/bricks-gallery.php:167
+msgid "Include subfolder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:185, ../build/happyfiles-pro/includes/setup.php:187, ../build/happyfiles-pro/includes/shortcode.php:108, ../build/happyfiles-pro/includes/shortcode.php:110, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:173, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:185, ../includes/setup.php:185, ../includes/setup.php:187, ../includes/shortcode.php:108, ../includes/shortcode.php:110, ../includes/integrations/bricks-gallery.php:173, ../includes/integrations/bricks-gallery.php:185
+msgid "Caption"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:186, ../build/happyfiles-pro/includes/setup.php:187, ../build/happyfiles-pro/includes/setup.php:188, ../build/happyfiles-pro/includes/setup.php:189, ../build/happyfiles-pro/includes/setup.php:190, ../build/happyfiles-pro/includes/shortcode.php:109, ../build/happyfiles-pro/includes/shortcode.php:110, ../build/happyfiles-pro/includes/shortcode.php:111, ../build/happyfiles-pro/includes/shortcode.php:112, ../build/happyfiles-pro/includes/shortcode.php:113, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:179, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:185, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:192, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:199, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:206, ../includes/setup.php:186, ../includes/setup.php:187, ../includes/setup.php:188, ../includes/setup.php:189, ../includes/setup.php:190, ../includes/shortcode.php:109, ../includes/shortcode.php:110, ../includes/shortcode.php:111, ../includes/shortcode.php:112, ../includes/shortcode.php:113, ../includes/integrations/bricks-gallery.php:179, ../includes/integrations/bricks-gallery.php:185, ../includes/integrations/bricks-gallery.php:192, ../includes/integrations/bricks-gallery.php:199, ../includes/integrations/bricks-gallery.php:206
+msgid "Lightbox"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:188, ../build/happyfiles-pro/includes/shortcode.php:111, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:192, ../includes/setup.php:188, ../includes/shortcode.php:111, ../includes/integrations/bricks-gallery.php:192
+msgid "Fullscreen"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:189, ../build/happyfiles-pro/includes/shortcode.php:112, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:199, ../includes/setup.php:189, ../includes/shortcode.php:112, ../includes/integrations/bricks-gallery.php:199
+msgid "Thumbnails"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:190, ../build/happyfiles-pro/includes/shortcode.php:113, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:206, ../includes/setup.php:190, ../includes/shortcode.php:113, ../includes/integrations/bricks-gallery.php:206
+msgid "Zoom"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:193, ../includes/setup.php:193
+msgid "Date"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:194, ../includes/setup.php:194
+msgid "Author"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:195, ../includes/setup.php:195
+msgid "Name"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:196, ../includes/setup.php:196
+msgid "Title"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:197, ../includes/setup.php:197
+msgid "Type"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:198, ../includes/setup.php:198
+msgid "Modified"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:199, ../includes/setup.php:199
+msgid "Random"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:200, ../build/happyfiles-pro/includes/shortcode.php:148, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:44, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:153, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:156, ../includes/setup.php:200, ../includes/shortcode.php:148, ../includes/integrations/bricks-gallery.php:44, ../includes/integrations/bricks-gallery.php:153, ../includes/integrations/bricks-gallery.php:156
+msgid "None"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:201, ../build/happyfiles-pro/includes/pro/filesizes.php:27, ../includes/setup.php:201, ../includes/pro/filesizes.php:27
+msgid "File size"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:204, ../includes/setup.php:204
+msgid "Descending"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:205, ../includes/setup.php:205
+msgid "Ascending"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:208, ../includes/setup.php:208
+msgid "Attachment"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:209, ../includes/setup.php:209
+msgid "Media"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/setup.php:236, ../includes/setup.php:236
+msgid "Optional: Assign a folder to your uploaded file(s):"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:91, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:14, ../includes/shortcode.php:91, ../includes/integrations/bricks-gallery.php:14
+msgid "Gallery"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:92, ../includes/shortcode.php:92
+msgid "Display your images in a beautiful gallery."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:93, ../includes/shortcode.php:93
+msgid "Gallery settings"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:139, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:137, ../includes/shortcode.php:139, ../includes/integrations/bricks-gallery.php:137
+msgid "Thumbnail"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:140, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:138, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:143, ../includes/shortcode.php:140, ../includes/integrations/bricks-gallery.php:138, ../includes/integrations/bricks-gallery.php:143
+msgid "Medium"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:141, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:139, ../includes/shortcode.php:141, ../includes/integrations/bricks-gallery.php:139
+msgid "Large"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:142, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:140, ../includes/shortcode.php:142, ../includes/integrations/bricks-gallery.php:140
+msgid "Full size"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:146, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:151, ../includes/shortcode.php:146, ../includes/integrations/bricks-gallery.php:151
+msgid "Attachment page"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:147, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:152, ../includes/shortcode.php:147, ../includes/integrations/bricks-gallery.php:152
+msgid "Media file"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:382, ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:216, ../includes/shortcode.php:382, ../includes/integrations/bricks-gallery.php:216
+msgid "No folder selected."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/shortcode.php:409, ../includes/shortcode.php:409
+msgid "The selected folder has no items."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:120, ../build/happyfiles-pro/includes/user.php:161, ../build/happyfiles-pro/includes/admin/settings.php:111, ../includes/user.php:120, ../includes/user.php:161, ../includes/admin/settings.php:111
+msgid "Upload to folder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:124, ../build/happyfiles-pro/includes/user.php:162, ../build/happyfiles-pro/includes/admin/settings.php:109, ../includes/user.php:124, ../includes/user.php:162, ../includes/admin/settings.php:109
+msgid "Full access"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:128, ../build/happyfiles-pro/includes/user.php:163, ../build/happyfiles-pro/includes/admin/settings.php:112, ../includes/user.php:128, ../includes/user.php:163, ../includes/admin/settings.php:112
+msgid "No access"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:132, ../build/happyfiles-pro/includes/user.php:160, ../build/happyfiles-pro/includes/admin/settings.php:110, ../includes/user.php:132, ../includes/user.php:160, ../includes/admin/settings.php:110
+msgid "View folders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:149, ../build/happyfiles-pro/includes/user.php:173, ../build/happyfiles-pro/includes/pro/settings.php:429, ../includes/user.php:149, ../includes/user.php:173, ../includes/pro/settings.php:429
+msgid "Enabled"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:149, ../build/happyfiles-pro/includes/user.php:174, ../build/happyfiles-pro/includes/pro/settings.php:428, ../includes/user.php:149, ../includes/user.php:174, ../includes/pro/settings.php:428
+msgid "Disabled"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:156, ../build/happyfiles-pro/includes/admin/settings.php:89, ../includes/user.php:156, ../includes/admin/settings.php:89
+msgid "Folder access"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:159, ../build/happyfiles-pro/includes/user.php:172, ../includes/user.php:159, ../includes/user.php:172
+msgid "Inherit"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/user.php:169, ../build/happyfiles-pro/includes/pro/settings.php:405, ../includes/user.php:169, ../includes/pro/settings.php:405
+msgid "SVG support"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:6, ../includes/admin/settings.php:6
+msgid "General"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:7, ../includes/admin/settings.php:7
+msgid "Permissions"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:8, ../build/happyfiles-pro/includes/admin/settings.php:178, ../build/happyfiles-pro/includes/admin/settings.php:142, ../includes/admin/settings.php:8, ../includes/admin/settings.php:178, ../includes/admin/settings.php:142
+msgid "Import"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:8, ../build/happyfiles-pro/includes/admin/settings.php:144, ../includes/admin/settings.php:8, ../includes/admin/settings.php:144
+msgid "Export"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:23, ../includes/admin/settings.php:23
+msgid "Default open folder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:29, ../includes/admin/settings.php:29
+msgid "Last opened folder"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:32, ../includes/admin/settings.php:32
+msgid "Set folder you want to open on page load."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:38, ../build/happyfiles-pro/includes/admin/settings.php:43, ../includes/admin/settings.php:38, ../includes/admin/settings.php:43
+msgid "Assign multiple folders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:46, ../includes/admin/settings.php:46
+msgid "When enabled you can assign multiple folders to one item. If disabled an item can only be assigned to one folder."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:52, ../build/happyfiles-pro/includes/admin/settings.php:57, ../includes/admin/settings.php:52, ../includes/admin/settings.php:57
+msgid "Remove from all folders"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:60, ../includes/admin/settings.php:60
+msgid "When enabled removing an item from a folder removes it from all other folders. If disabled the item will only be removed from the open folder."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:66, ../build/happyfiles-pro/includes/admin/settings.php:71, ../includes/admin/settings.php:66, ../includes/admin/settings.php:71
+msgid "Infinite scrolling"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:74, ../includes/admin/settings.php:74
+msgid "When enabled the media library uses infinite scrolling instead of the new \"Load more\" button (that was introduces in WordPress 5.8)."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:90, ../includes/admin/settings.php:90
+msgid "Set folder access level per user role. Set folder access for individual user on user profile page."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:181, ../includes/admin/settings.php:181
+msgid "No folders found to import."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:172, ../includes/admin/settings.php:172
+msgid "%s folders with %s associated items found to import."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:179, ../build/happyfiles-pro/includes/admin/settings.php:195, ../includes/admin/settings.php:179, ../includes/admin/settings.php:195
+msgid "Delete plugin data"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:164, ../includes/admin/settings.php:164
+msgid "Export your HappyFiles folder structure to import & use it in another installation."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/admin/settings.php:194, ../includes/admin/settings.php:194
+msgid "Save changes"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/integrations/bricks-gallery.php:31, ../includes/integrations/bricks-gallery.php:31
+msgid "Images"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/quick-edit.php:92, ../includes/pro/quick-edit.php:92
+msgid "Select featured image"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/quick-edit.php:93, ../includes/pro/quick-edit.php:93
+msgid "Remove featured image"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:89, ../includes/pro/settings.php:89
+msgid "License key deletion failed."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:87, ../includes/pro/settings.php:87
+msgid "License key has been removed."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:174, ../includes/pro/settings.php:174
+msgid "One click updates"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:190, ../includes/pro/settings.php:190
+msgid "Paste your license key from your %s in here to enable one-click plugin updates and notifications."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:190, ../includes/pro/settings.php:190
+msgid "HappyFiles account"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:186, ../includes/pro/settings.php:186
+msgid "Deactivate license"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:207, ../includes/pro/settings.php:207
+msgid "Post Types"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:217, ../includes/pro/settings.php:217
+msgid "Plugins"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:250, ../build/happyfiles-pro/includes/pro/settings.php:260, ../includes/pro/settings.php:250, ../includes/pro/settings.php:260
+msgid "Disable in media library"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:280, ../includes/pro/settings.php:280
+msgid "Enforce loading"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:305, ../includes/pro/settings.php:305
+msgid "Enforce loading HappyFiles in the wp-admin or frontend (logged-in useres only), select the loading location above."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:317, ../build/happyfiles-pro/includes/pro/settings.php:323, ../includes/pro/settings.php:317, ../includes/pro/settings.php:323
+msgid "Sort by file size"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:326, ../includes/pro/settings.php:326
+msgid "When enabled you can sort your attachments by file size."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:339, ../includes/pro/settings.php:339
+msgid "Regenerate file sizes"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:354, ../includes/pro/settings.php:354
+msgid "Featured image"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:360, ../includes/pro/settings.php:360
+msgid "Set featured image via \"Quick edit\""
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:368, ../includes/pro/settings.php:368
+msgid "Show featured image preview column"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:385, ../includes/pro/settings.php:385
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:390, ../includes/pro/settings.php:390
+msgid "View full folder name on hover"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:407, ../includes/pro/settings.php:407
+msgid "Enable/disable SVG upload, preview & sanitization per user role. Set SVG support for individual user on user profile page."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:408, ../includes/pro/settings.php:408
+msgid "Upload SVG files only from trusted sources as they can contain and execute malicious XML code."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:439, ../build/happyfiles-pro/includes/pro/settings.php:450, ../includes/pro/settings.php:439, ../includes/pro/settings.php:450
+msgid "Disable SVG sanitization"
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/settings.php:454, ../includes/pro/settings.php:454
+msgid "Disable built-in SVG sanitization if you experience issues when uploading SVG files."
+msgstr ""
+
+#: ../build/happyfiles-pro/includes/pro/svg.php:150, ../includes/pro/svg.php:150
+msgid "This file couldn't be sanitized for security reasons and wasn't uploaded."
+msgstr ""
