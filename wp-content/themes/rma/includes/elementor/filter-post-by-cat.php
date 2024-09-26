@@ -63,7 +63,7 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                 'post_type' => $post_type,
                 'posts_per_page' => -1,
                 'orderby' => 'date',
-                'order' => 'DESC',
+                'order' => 'ASC',
                 'post_status' => 'publish'
             ];
     
@@ -91,35 +91,65 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                             }
                         }
                     }
-                    if ( ! empty( $categories ) ) { ?>
+                    $first_category_slug = '';
+                    if ( ! empty( $categories ) ) {
+                        $i = 1; ?>
                         <div class="filters">
                             <div class="category-filter">
                                 <?php
                                 foreach ( $categories as $term ) {
-                                    echo '<div class="item"><a href="#" data-taxonomy="'.$taxonomy_name.'" data-category="'.$term->slug.'">'.$term->name.'</a></div>';
+                                    if($i == 1) {
+                                        $first_category_slug = $term->slug;
+                                        echo '<div class="item active"><a href="#" '.get_category_partner_color(term_id: $term->term_id).' data-taxonomy="'.$taxonomy_name.'" data-category="'.$term->slug.'">'.$term->name.'</a></div>';
+                                    }else{
+                                        echo '<div class="item"><a href="#" '.get_category_partner_color(term_id: $term->term_id).' data-taxonomy="'.$taxonomy_name.'" data-category="'.$term->slug.'">'.$term->name.'</a></div>';
+                                    }
+                                $i++;
                                 }
                                 ?>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php }
+                    if ($post_type === 'post') {
+                        $arg_post = [
+                            'post_type' => $post_type,
+                            'category_name' => $first_category_slug,
+                            'posts_per_page' => -1,
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'post_status' => 'publish'
+                        ];
+                    } else {
+                        $arg_post = [
+                            'post_type' => $post_type,
+                            'posts_per_page' => -1,
+                            'orderby' => 'date',
+                            'order' => 'ASC',
+                            'post_status' => 'publish',
+                            'tax_query' => [
+                                [
+                                    'taxonomy' => $taxonomy_name,
+                                    'field' => 'slug',
+                                    'terms' => $first_category_slug,
+                                ],
+                            ],
+                        ];
+                    }
+                    $query_post = new WP_Query( $arg_post ); ?>
                     <div class="post-list">
-                        <div class="swiper">
+                        <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <?php
-                                while ($query->have_posts()) {
-                                    $query->the_post();
+                                while ($query_post->have_posts()) {
+                                    $query_post->the_post();
                                     ?>
                                     <div class="logo-item swiper-slide">
-                                        <div class="logo-inner">
-                                            <div class="logo">
-                                                <?php
-                                                if (get_post_thumbnail_id()) {
-                                                    echo wp_get_attachment_image(get_post_thumbnail_id(), 'full');
-                                                } else {
-                                                    echo '<img src="' . get_stylesheet_directory_uri() . '/assets/images/default-img.svg" width="auto" height="auto" alt="' . get_the_title() . '"/>';
-                                                } ?>
-                                            </div>
-                                        </div>
+                                        <?php
+                                        if (get_post_thumbnail_id()) {
+                                            echo wp_get_attachment_image(get_post_thumbnail_id(), 'full');
+                                        } else {
+                                            echo '<img src="' . get_stylesheet_directory_uri() . '/assets/images/default-img.svg" width="auto" height="auto" alt="' . get_the_title() . '"/>';
+                                        } ?>
                                     </div>
                                     <?php
                                 }
@@ -133,7 +163,7 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                     <script>
                         jQuery(document).ready(function ($) {
 
-                            $('.filter-post-by-cat-<?= $widget_id; ?> .category-filter .item:first-child a').click();
+                            // $('.filter-post-by-cat-<?= $widget_id; ?> .category-filter .item:first-child a').click();
 
                             // Initialize Swiper
                             var latestNews;
@@ -144,12 +174,13 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                                         slidesPerView: 2,
                                         grid: {
                                             rows: 6,
+                                            fill: 'column'
                                         },
-                                        spaceBetween: 20,
-                                        autoplay: {
-                                            delay: 5000,
-                                            disableOnInteraction: false,
-                                        },
+                                        spaceBetween: 10,
+                                        // autoplay: {
+                                        //     delay: 5000,
+                                        //     disableOnInteraction: false,
+                                        // },
                                         pagination: {
                                             el: '.filter-post-by-cat-<?= $widget_id; ?> .swiper-pagination',
                                             clickable: true,
@@ -160,14 +191,13 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                                         },
                                         breakpoints: {
                                             768: {
-                                                slidesPerView: 3,
+                                                slidesPerView: 5,
                                                 grid: {
                                                     rows: 3,
                                                 }
                                             },
                                         },
-                                        loop: true,
-                                        loopFillGroupWithBlank: true
+                                        loop: true
                                     });
                                 }
                             }
@@ -231,11 +261,7 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
             
                                 $.each(posts, function (index, post) {
                                     const slide = $('<div>').addClass('logo-item swiper-slide').html(`
-                                        <div class="logo-inner">
-                                            <div class="logo">
-                                                ${post.image}
-                                            </div>
-                                        </div>
+                                        ${post.image}
                                     `);
                                     swiperWrapper.append(slide);
                                 });

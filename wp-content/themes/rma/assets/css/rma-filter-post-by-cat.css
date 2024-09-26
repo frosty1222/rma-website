@@ -1,3 +1,48 @@
+.filter-post-by-cat .category-filter .item.active a {
+    background: #FFFFFF;
+}
+.filter-post-by-cat .category-filter .item.active a::after {
+    opacity: 1;
+}
+.filter-post-by-cat .category-filter .item a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #002E6E;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .3s;
+}
+.filter-post-by-cat .category-filter .item a {
+    text-align: center;
+    padding: 20px 20px 17px;
+    position: relative;
+    width: 100%;
+    display: block;
+    background: rgb(217 217 217 / 16%);
+    color: #15346D;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+.filter-post-by-cat .swiper {
+    width: 100%;
+    height: auto;
+}
+.filter-post-by-cat .swiper-slide {
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter-post-by-cat .category-filter .item {
+    flex: 1;
+}
+
 @media(min-width: 768px) {
     .filter-post-by-cat .category-filter {
         display: flex !important;
