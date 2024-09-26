@@ -247,7 +247,6 @@ class Elementor_Custom_Widget extends \Elementor\Widget_Base {
                                     <?php echo esc_html( $country['country_name'] ); ?>
                                     <div class="country-services">
                                         <?php 
-                                        // Check if services are available and have an icon URL
                                         if (!empty($country['country_services']) && is_array($country['country_services'])) {
                                             foreach ( $country['country_services'] as $service ) {
                                                 if ( isset( $service['service_icon']['url'] ) && !empty( $service['service_icon']['url'] ) ) {
@@ -280,19 +279,17 @@ class Elementor_Custom_Widget extends \Elementor\Widget_Base {
     
         <script>
         jQuery(document).ready(function($) {
-            // Toggle country list khi click vào continent
             $('.continent-item').on('click', function() {
                 $(this).find('.country-list').slideToggle();
             });
     
-            // Change bottom-left text và hiển thị Explore More khi click vào quốc gia
             $('.country-item').on('click', function() {
                 var countryName = $(this).data('country-name');
                 var exploreLinkText = $(this).data('explore-link');
     
                 $('#bottom-left-text').text(countryName);
                 $('#explore-more-link').text(exploreLinkText);
-                $('#explore-more-link').fadeIn(); // Hiển thị liên kết Explore More khi click vào quốc gia
+                $('#explore-more-link').fadeIn();
             });
         });
         </script>
