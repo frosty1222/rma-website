@@ -102,13 +102,16 @@ if (!class_exists('Rma_Functions')) {
             wp_enqueue_style('rma-fonts', self::rma_fonts_url(), array(), null);
             /* Theme stylesheet. */
             wp_enqueue_style('bootstrap', get_theme_file_uri('/assets/css/bootstrap.css'), array(), '3.3.7');
+            wp_enqueue_style('swiper-bundle-min-css', get_theme_file_uri('/assets/css/swiper-bundle.min.css'), array(), '3.3.7');
             wp_enqueue_style('style-css', get_theme_file_uri('/assets/css/style.css'), array(), '1.0');
+            wp_enqueue_style('rma-filter-post-by-cat-css', get_theme_file_uri('/assets/css/rma-filter-post-by-cat.css'), array(), '1.0');
             wp_enqueue_style('rma-main-style', get_stylesheet_uri());
             if (is_singular() && comments_open() && get_option('thread_comments')) {
                 wp_enqueue_script('comment-reply');
             }
             /* SCRIPTS */
             wp_enqueue_script('bootstrap', get_theme_file_uri('/assets/js/bootstrap.min.js'), array('jquery'), '3.3.7', true);
+            wp_enqueue_script('swiper-bundle-min-js', get_theme_file_uri('/assets/js/swiper-bundle.min.js'), array('jquery'), '3.3.7', false);
             wp_enqueue_script('rma-script', get_theme_file_uri('/assets/js/functions.js'), array('jquery'), '1.0', true);
         }
 
@@ -200,3 +203,105 @@ function rma_admin_css()
     }
   </style>';
 }
+
+/**
+ * Summary of filter_posts
+ * @return void
+ */
+function filter_posts_by_cat()
+{
+	$category = sanitize_text_field($_GET['category']);
+	$post_type = sanitize_text_field($_GET['post_type']);
+	$taxonomy_name = sanitize_text_field($_GET['taxonomy_name']);
+	if ($post_type === 'post') {
+        $args = [
+            'post_type' => $post_type,
+            'category_name' => $category,
+            'posts_per_page' => -1,
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'post_status' => 'publish'
+        ];
+    } else {
+        $args = [
+            'post_type' => $post_type,
+            'posts_per_page' => -1,
+            'orderby' => 'date',
+            'order' => 'ASC',
+            'post_status' => 'publish',
+            'tax_query' => [
+                [
+                    'taxonomy' => $taxonomy_name,
+                    'field' => 'slug',
+                    'terms' => $category,
+                ],
+            ],
+        ];
+    }
+
+	$query = new WP_Query($args);
+	$posts = [];
+
+	if ($query->have_posts()) {
+		while ($query->have_posts()) {
+			$query->the_post();
+			$posts[] = [
+				'image' => get_the_post_thumbnail(get_the_ID(), 'full'),
+			];
+		}
+	}
+
+	wp_reset_postdata();
+
+	echo json_encode(['posts' => $posts]);
+	wp_die();
+}
+add_action('wp_ajax_filter_posts_by_cat', 'filter_posts_by_cat');
+add_action('wp_ajax_nopriv_filter_posts_by_cat', 'filter_posts_by_cat');
+
+// Thêm trường chọn màu vào trang thêm mới taxonomy
+function add_color_field_to_category_partner() {
+    ?>
+    <div class="form-field">
+        <label for="taxonomy_color"><?php _e( 'Color', 'text_domain' ); ?></label>
+        <input type="color" name="taxonomy_color" id="taxonomy_color" value="">
+        <p class="description"><?php _e( 'Select a color for this taxonomy.', 'text_domain' ); ?></p>
+    </div>
+    <?php
+}
+add_action( 'category_partner_add_form_fields', 'add_color_field_to_category_partner' );
+
+// Lưu giá trị màu sắc khi lưu taxonomy
+function save_category_partner_color_meta( $term_id ) {
+    if ( isset( $_POST['taxonomy_color'] ) && $_POST['taxonomy_color'] !== '' ) {
+        $color = sanitize_hex_color( $_POST['taxonomy_color'] );
+        add_term_meta( $term_id, 'taxonomy_color', $color, true );
+    }
+}
+add_action( 'created_category_partner', 'save_category_partner_color_meta', 10, 2 );
+add_action( 'edited_category_partner', 'save_category_partner_color_meta', 10, 2 );
+
+// Thêm trường chọn màu vào trang chỉnh sửa taxonomy
+function edit_color_field_to_category_partner( $term ) {
+    $color = get_term_meta( $term->term_id, 'taxonomy_color', true );
+    ?>
+    <tr class="form-field">
+        <th scope="row" valign="top">
+            <label for="taxonomy_color"><?php _e( 'Color', 'text_domain' ); ?></label>
+        </th>
+        <td>
+            <input type="color" name="taxonomy_color" id="taxonomy_color" value="<?php echo esc_attr( $color ) ? esc_attr( $color ) : ''; ?>">
+            <p class="description"><?php _e( 'Select a color for this taxonomy.', 'text_domain' ); ?></p>
+        </td>
+    </tr>
+    <?php
+}
+add_action( 'category_partner_edit_form_fields', 'edit_color_field_to_category_partner' );
+
+function get_category_partner_color( $term_id ) {
+    $color = get_term_meta( $term_id, 'taxonomy_color', true );
+    if ( $color ) {
+        return 'style="color: '.$color.'"';
+    }
+}
+
