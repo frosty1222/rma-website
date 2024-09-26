@@ -305,3 +305,33 @@ function get_category_partner_color( $term_id ) {
     }
 }
 
+
+
+if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
+    exit; // Exit if Elementor is not active
+}
+
+// Function to register custom Elementor widget
+function register_custom_elementor_widgets( $widgets_manager ) {
+
+    // Include the widget file (assuming it's located in the "widgets" folder of your theme)
+    require_once( get_template_directory() . '/widgets/news-grid-widget.php' );
+
+    // Register the custom widget with Elementor
+    $widgets_manager->register( new \News_Grid_Widget() );
+}
+
+// Hook to the Elementor widgets registration action
+add_action( 'elementor/widgets/register', 'register_custom_elementor_widgets' );
+
+
+/**
+ * Registers the style for the news grid widget.
+ * This function adds a CSS stylesheet to the WordPress theme for styling the news grid widget.
+ */
+function rma_register_news_grid_widget_styles() {
+    wp_enqueue_style('news-grid-widget-style', get_stylesheet_directory_uri() . '/assets/css/news-grid-widget.css', [], '1.0.0' );
+
+    wp_enqueue_script('news-grid', get_theme_file_uri('/assets/js/news-grid.js'), array('jquery'), '1.0', true);
+}
+add_action( 'wp_enqueue_scripts', 'rma_register_news_grid_widget_styles' );
