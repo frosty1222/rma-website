@@ -1,4 +1,10 @@
 <?php
+/**
+ * Register new Elementor widgets.
+ *
+ * @param \Elementor\Widgets_Manager $widgets_manager Elementor widgets manager.
+ * @return void
+ */
 if (!isset($content_width)) $content_width = 900;
 if (!class_exists('Rma_Functions')) {
     class Rma_Functions
@@ -44,7 +50,6 @@ if (!class_exists('Rma_Functions')) {
                 )
             );
         }
-
         public function rma_move_comment_field_to_bottom($fields)
         {
             $comment_field = $fields['comment'];
@@ -105,6 +110,7 @@ if (!class_exists('Rma_Functions')) {
             wp_enqueue_style('swiper-bundle-min-css', get_theme_file_uri('/assets/css/swiper-bundle.min.css'), array(), '3.3.7');
             wp_enqueue_style('style-css', get_theme_file_uri('/assets/css/style.css'), array(), '1.0');
             wp_enqueue_style('rma-filter-post-by-cat-css', get_theme_file_uri('/assets/css/rma-filter-post-by-cat.css'), array(), '1.0');
+            wp_enqueue_style('custom-widget-styles', get_template_directory_uri() . '/css/custom-widget-styles.css' );
             wp_enqueue_style('rma-main-style', get_stylesheet_uri());
             if (is_singular() && comments_open() && get_option('thread_comments')) {
                 wp_enqueue_script('comment-reply');
@@ -250,11 +256,22 @@ function filter_posts_by_cat()
 			];
 		}
 	}
-
+    
 	wp_reset_postdata();
 
 	echo json_encode(['posts' => $posts]);
 	wp_die();
 }
+
 add_action('wp_ajax_filter_posts_by_cat', 'filter_posts_by_cat');
 add_action('wp_ajax_nopriv_filter_posts_by_cat', 'filter_posts_by_cat');
+
+
+function register_new_widgets( $widgets_manager ) {
+
+	require_once( __DIR__ . '/widgets/list-widget.php' );
+
+	$widgets_manager->register( new \Elementor_Custom_Widget() );
+
+}
+add_action( 'elementor/widgets/register', 'register_new_widgets' );
