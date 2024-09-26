@@ -100,6 +100,9 @@ class Elementor_Custom_Widget extends \Elementor\Widget_Base {
                         'name' => 'service_icon',
                         'label' => __( 'Service Icon', 'elementor-custom-widget' ),
                         'type' => \Elementor\Controls_Manager::MEDIA,
+                        'default' => [
+                            'url' => '', // Ensure default value is set to avoid null issues
+                        ],
                     ],
                     [
                         'name' => 'service_name',
@@ -111,6 +114,7 @@ class Elementor_Custom_Widget extends \Elementor\Widget_Base {
                 'title_field' => '{{{ service_name }}}',
             ]
         );
+        
 
         $countries_repeater->add_control(
             'explore_link_text',
@@ -127,10 +131,9 @@ class Elementor_Custom_Widget extends \Elementor\Widget_Base {
                 'label' => __( 'Countries', 'elementor-custom-widget' ),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => $countries_repeater->get_controls(),
-                'title_field' => '{{{ country_name }}}',
+                'title_field' => '{{{ country_name }}}', // Kiểm tra trường title_field này
             ]
         );
-
         $this->add_control(
             'continent_list',
             [
