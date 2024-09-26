@@ -93,8 +93,18 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                     }
                     $first_category_slug = '';
                     if ( ! empty( $categories ) ) {
-                        $i = 1; ?>
+                        $i = 1;
+                        $first_count = 1; ?>
                         <div class="filters">
+                            <?php
+                            foreach ( $categories as $term ) {
+                                if($first_count == 1) { ?>
+                                    <div class="label-mb" <?= get_category_partner_color(term_id: $term->term_id); ?>><span><?= $term->name; ?></span></div>
+                                <?php
+                                }
+                            $first_count++;
+                            }
+                            ?>
                             <div class="category-filter">
                                 <?php
                                 foreach ( $categories as $term ) {
@@ -156,9 +166,19 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                                 ?>
                             </div>
                         </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-control">
+                            <div class="swiper-button swiper-button-prev">
+                                <svg width="33" height="10" viewBox="0 0 33 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.52123 9.19065L0.505146 5.17455C0.2587 4.92811 0.2587 4.52853 0.505146 4.28209L4.52123 0.265991C4.76768 0.0195432 5.16725 0.0195432 5.4137 0.265991C5.66014 0.512438 5.66014 0.91201 5.4137 1.15846L2.4749 4.09725L31.468 4.09725C31.8166 4.09725 32.0991 4.37979 32.0991 4.72832C32.0991 5.07685 31.8166 5.35939 31.468 5.35939L2.4749 5.35939L5.4137 8.29818C5.66014 8.54463 5.66014 8.9442 5.4137 9.19065C5.16725 9.4371 4.76768 9.4371 4.52123 9.19065Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button swiper-button-next">
+                                <svg width="33" height="10" viewBox="0 0 33 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.1 9.19059L32.1161 5.17449C32.3625 4.92804 32.3625 4.52847 32.1161 4.28203L28.1 0.26593C27.8535 0.0194821 27.454 0.0194822 27.2075 0.26593C26.9611 0.512377 26.9611 0.911949 27.2075 1.1584L30.1463 4.09719L1.15317 4.09719C0.804636 4.09719 0.522097 4.37973 0.522097 4.72826C0.522097 5.07679 0.804636 5.35933 1.15317 5.35933L30.1463 5.35933L27.2075 8.29812C26.9611 8.54457 26.9611 8.94414 27.2075 9.19059C27.454 9.43704 27.8535 9.43704 28.1 9.19059Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                     <script>
                         jQuery(document).ready(function ($) {
@@ -174,13 +194,8 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                                         slidesPerView: 2,
                                         grid: {
                                             rows: 6,
-                                            fill: 'column'
                                         },
-                                        spaceBetween: 10,
-                                        // autoplay: {
-                                        //     delay: 5000,
-                                        //     disableOnInteraction: false,
-                                        // },
+                                        spaceBetween: 20,
                                         pagination: {
                                             el: '.filter-post-by-cat-<?= $widget_id; ?> .swiper-pagination',
                                             clickable: true,
@@ -191,13 +206,24 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                                         },
                                         breakpoints: {
                                             768: {
+                                                slidesPerView: 3,
+                                                grid: {
+                                                    rows: 4,
+                                                }
+                                            },
+                                            1025: {
+                                                slidesPerView: 4,
+                                                grid: {
+                                                    rows: 3,
+                                                }
+                                            },
+                                            1200: {
                                                 slidesPerView: 5,
                                                 grid: {
                                                     rows: 3,
                                                 }
                                             },
-                                        },
-                                        loop: true
+                                        }
                                     });
                                 }
                             }
@@ -208,22 +234,30 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                             // Add click event listener for category buttons
                             $('.filter-post-by-cat-<?= $widget_id; ?> .category-filter a').on('click', function (e) {
                                 e.preventDefault();
-                                $('.filter-post-by-cat-<?= $widget_id; ?> .category-filter a').removeClass('active');
                                 $('.filter-post-by-cat-<?= $widget_id; ?> .category-filter>div').removeClass('active');
-                                $(this).addClass('active').parent().addClass('active');
+                                $(this).parent().addClass('active');
                                 $('.filter-post-by-cat-<?= $widget_id; ?> .post-list').addClass('loading');
                                 const category = $(this).data('category');
                                 const taxonomy = $(this).data('taxonomy');
                                 const post_type = '<?= $post_type ?>';
                                 var text = $(this).text();
                                 $('.filter-post-by-cat-<?= $widget_id; ?> .filters .label-mb span').text(text);
+                                $('.filter-post-by-cat-<?= $widget_id; ?> .filters .label-mb').attr('style', $(this).attr('style'));
                                 $('.filter-post-by-cat-<?= $widget_id; ?> .category-filter').slideToggle();
+                                $('.filter-post-by-cat-<?= $widget_id; ?> .label-mb').toggleClass('open');
                                 fetchPosts(post_type, taxonomy, category);
                             });
+
+                            $('.filter-post-by-cat-<?= $widget_id; ?> .label-mb').on('click', function(e){
+                                e.preventDefault();
+                                $(this).toggleClass('open');
+                                $('.filter-post-by-cat-<?= $widget_id; ?> .category-filter').slideToggle();
+                            })
             
                             $(document).click(function(event) {
                                 if (!$(event.target).closest(".filter-post-by-cat-<?= $widget_id; ?> .filters").length) {
                                     $(".filter-post-by-cat-<?= $widget_id; ?> .category-filter").slideUp();
+                                    $('.filter-post-by-cat-<?= $widget_id; ?> .label-mb').toggleClass('open');
                                 }
                             });
             
@@ -243,6 +277,7 @@ if (!class_exists('Rma_Elementor_Filter_Post_By_Cat')) {
                                     dataType: 'json',
                                     success: function (data) {
                                         updateSlider(data.posts);
+                                        $('.filter-post-by-cat-<?= $widget_id; ?> .post-list').removeClass('loading');
                                     },
                                     error: function (error) {
                                         console.error('Error fetching posts:', error);
